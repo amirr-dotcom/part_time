@@ -55,6 +55,7 @@ class ImageConstant {
   static String imgHomew = 'assets/images/img_home.svg';
 
   static String imgGroup5 = 'assets/images/img_group5.png';
+  static String imgShadow = 'assets/images/img_shadow.png';
 
 
 }
