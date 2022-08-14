@@ -1,7 +1,7 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:part_time/core/app_export.dart';
-import 'package:part_time/presentation/booking_screen/widgets/shadow_container.dart';
+import 'package:part_time/view/booking_screen/widgets/shadow_container.dart';
 import 'package:part_time/widgets/custom_icon_button.dart';
 
 // ignore: must_be_immutable

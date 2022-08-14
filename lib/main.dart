@@ -1,6 +1,8 @@
-import 'package:part_time/presentation/booking_screen/booking_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import 'package:part_time/view/dashboard.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Kumbh Sans"
       ),
-      home: BookingScreen(),
+      home: DashboardView(),
     );
   }
 }

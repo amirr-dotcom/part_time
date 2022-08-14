@@ -33,6 +33,24 @@ class ColorConstant {
   static Color indigo800 = fromHex('#423d80');
 
   static Color indigo500 = fromHex('#5b55ab');
+  static Color indigo50 = fromHex('#eaeaf4');
+
+
+  static Color deepOrange300Cc = fromHex('#cce0965b');
+
+
+
+  static Color black900 = fromHex('#000000');
+
+
+
+  static Color bluegray101 = fromHex('#d1e0ec');
+
+  static Color deepOrange300 = fromHex('#e0965b');
+
+
+  static Color indigo801 = fromHex('#423d80');
+
 
   static Color fromHex(String hexString) {
     final buffer = StringBuffer();

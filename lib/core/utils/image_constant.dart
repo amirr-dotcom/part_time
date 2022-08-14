@@ -20,11 +20,41 @@ class ImageConstant {
   static String imgSettings = 'assets/images/img_settings.svg';
 
   static String imgXmlid31 = 'assets/images/img_xmlid31.svg';
-  static String imgCoupon = 'assets/images/img_coupon.png';
+  static String imgCoupon = 'assets/images/img_coupon_trimmed.png';
 
   static String imgCall = 'assets/images/img_call.svg';
 
   static String imgHome = 'assets/images/img_home.svg';
 
   static String imageNotFound = 'assets/images/image_not_found.png';
+
+
+  static String imgVector = 'assets/images/img_vector.svg';
+
+
+  static String imgGroup7 = 'assets/images/img_group7.png';
+
+
+
+  static String imgGroup6 = 'assets/images/img_group6.svg';
+
+
+  static String imgGroup12 = 'assets/images/img_group12.png';
+
+  static String imgAlarm = 'assets/images/img_alarm.svg';
+
+  static String imgRectangle688 = 'assets/images/img_rectangle688.png';
+
+
+  static String imgRectangle = 'assets/images/img_rectangle.png';
+
+  static String imgCall20X20 = 'assets/images/img_call_20X20.svg';
+
+  static String imgGroup13 = 'assets/images/img_group13.png';
+
+  static String imgHomew = 'assets/images/img_home.svg';
+
+  static String imgGroup5 = 'assets/images/img_group5.png';
+
+
 }
