@@ -1,14 +1,11 @@
-
-
-
-
 import 'package:flutter/material.dart';
-import 'package:part_time/core/utils/color_constant.dart';
-import 'package:part_time/core/utils/math_utils.dart';
+import 'package:gradient_like_css/gradient_like_css.dart';
+import 'package:part_time/core/app_export.dart';
+import 'package:part_time/view/booking_screen/widgets/shadow_container.dart';
 
 class CustomIconButton2 extends StatelessWidget {
   CustomIconButton2(
-      {this.shape,
+      {Key? key, this.shape,
         this.padding,
         this.variant,
         this.alignment,
@@ -16,7 +13,7 @@ class CustomIconButton2 extends StatelessWidget {
         this.height,
         this.width,
         this.child,
-        this.onTap});
+        this.onTap}) : super(key: key);
 
   IconButtonShape? shape;
 
@@ -36,6 +33,7 @@ class CustomIconButton2 extends StatelessWidget {
 
   VoidCallback? onTap;
 
+
   @override
   Widget build(BuildContext context) {
     return alignment != null
@@ -47,31 +45,61 @@ class CustomIconButton2 extends StatelessWidget {
   }
 
   _buildIconButtonWidget() {
-    return Padding(
-      padding: margin ?? EdgeInsets.zero,
-      child: IconButton(
-        constraints: BoxConstraints(
-          minHeight: getSize(height ?? 0),
-          minWidth: getSize(width ?? 0),
+    return InkWell(
+      onTap: onTap,
+
+
+      child: SizedBox(
+        height: height,
+        width: width,
+        child: ShadowContainer(
+          xOffset: 3,
+          yOffset: 3,
+          blurRadius: 4,
+          shape: BoxShape.circle,
+
+          color2: ColorConstant.teal51,
+          child:  ShadowContainer(
+            xOffset: 2,
+            yOffset: 2,
+            blurRadius: 4,
+            inset: true,
+
+            shape: BoxShape.circle,
+
+
+            child: Container(
+              margin: getPadding(
+                  all: 10
+              ),
+              child: ShadowContainer(
+
+                  gradient: linearGradient(
+                    135,
+                    [
+                      "#ffffff",
+                      "#D3E7F6",
+                    ],
+                  ),
+                  xOffset: 2,
+                  yOffset: 2,
+                  blurRadius: 2,
+
+                  shape: BoxShape.circle,
+
+                  color2: ColorConstant.teal51,
+                  child: child??Container()),
+            ),
+          ),
         ),
-        padding: EdgeInsets.all(0),
-        icon: Container(
-          alignment: Alignment.center,
-          width: getSize(width ?? 0),
-          height: getSize(height ?? 0),
-          padding: _setPadding(),
-          decoration: _buildDecoration(),
-          child: child,
-        ),
-        onPressed: onTap,
       ),
     );
   }
 
   _buildDecoration() {
     return BoxDecoration(
-      color: _setColor(),
       borderRadius: _setBorderRadius(),
+      gradient: _setGradient(),
       boxShadow: _setBoxShadow(),
     );
   }
@@ -80,52 +108,79 @@ class CustomIconButton2 extends StatelessWidget {
     switch (padding) {
       default:
         return getPadding(
-          all: 13,
+          all: 6,
         );
-    }
-  }
-
-  _setColor() {
-    switch (variant) {
-      default:
-        return ColorConstant.gray100;
     }
   }
 
   _setBorderRadius() {
     switch (shape) {
       default:
-        return BorderRadius.only(
-          topLeft: Radius.circular(
-            getHorizontalSize(
-              30.00,
-            ),
+        return BorderRadius.circular(
+          getHorizontalSize(
+            100.50,
           ),
-          topRight: Radius.circular(
-            getHorizontalSize(
-              10.00,
-            ),
+        );
+    }
+  }
+
+  _setGradient() {
+    switch (variant) {
+      case IconButtonVariant.OutlineTeal51:
+        return LinearGradient(
+          begin: const Alignment(
+            3.885780586188048e-15,
+            3.885780586188048e-15,
           ),
-          bottomLeft: Radius.circular(
-            getHorizontalSize(
-              30.00,
-            ),
+          end: const Alignment(
+            1.000000000000004,
+            1.000000000000004,
           ),
-          bottomRight: Radius.circular(
-            getHorizontalSize(
-              10.00,
-            ),
+          colors: [
+            ColorConstant.whiteA700,
+            ColorConstant.teal51,
+          ],
+        );
+      default:
+        return LinearGradient(
+          begin: const Alignment(
+            7.098748738831873e-8,
+            1.000000078231094,
           ),
+          end: const Alignment(
+            1.0000000420436534,
+            0.09259252802599677,
+          ),
+          colors: [
+            ColorConstant.whiteA700,
+            ColorConstant.teal51,
+          ],
         );
     }
   }
 
   _setBoxShadow() {
     switch (variant) {
+      case IconButtonVariant.OutlineTeal51:
+        return [
+          BoxShadow(
+            color: ColorConstant.teal51,
+            spreadRadius: getHorizontalSize(
+              2.00,
+            ),
+            blurRadius: getHorizontalSize(
+              2.00,
+            ),
+            offset: const Offset(
+              2,
+              2,
+            ),
+          )
+        ];
       default:
         return [
           BoxShadow(
-            color: ColorConstant.teal50,
+            color: ColorConstant.teal51,
             spreadRadius: getHorizontalSize(
               2.00,
             ),
@@ -143,13 +198,12 @@ class CustomIconButton2 extends StatelessWidget {
 }
 
 enum IconButtonShape {
-  CustomBorderTL30,
+  RoundedBorder13,
 }
-
 enum IconButtonPadding {
-  PaddingAll13,
+  PaddingAll6,
 }
-
 enum IconButtonVariant {
-  OutlineTeal50,
+  OutlineTeal511_2,
+  OutlineTeal51,
 }

@@ -44,11 +44,39 @@ class PaymentMethodWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        CustomIconButton2(
+                        ShadowContainer(
                           height: 49,
-                          width: 49,
-                          child: CommonImageView(
-                            imagePath: ImageConstant.imgGroup13,
+                          width: 49,xOffset: 2,
+                          yOffset: 2,
+                          blurRadius: 6,
+                          color2: ColorConstant.teal51,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(
+                              getHorizontalSize(
+                                30.00,
+                              ),
+                            ),
+                            topRight: Radius.circular(
+                              getHorizontalSize(
+                                10.00,
+                              ),
+                            ),
+                            bottomLeft: Radius.circular(
+                              getHorizontalSize(
+                                30.00,
+                              ),
+                            ),
+                            bottomRight: Radius.circular(
+                              getHorizontalSize(
+                                10.00,
+                              ),
+                            ),
+                          ),
+                          child: Center(
+                            child: CommonImageView(
+                              height: getVerticalSize(30),
+                              imagePath: ImageConstant.imgGroup13,
+                            ),
                           ),
                         ),
                         Container(
@@ -108,25 +136,19 @@ class PaymentMethodWidget extends StatelessWidget {
                     right: 18,
                     bottom: 16,
                   ),
-                  child:     CustomIconButton(
-                    height: 27,
-                    width: 27,
-                    margin: getMargin(
-                      left: 9,
-                      top: 9,
-                      right: 10,
-                      bottom: 10,
-                    ),
-                    // variant: IconButtonVariant
-                    //     .OutlineTeal51,
-                    alignment: Alignment.center,
-                    child: Center(
-                      child: Container(
+                  child:     CustomIconButton2(
 
+
+                    child: Padding(
+                      padding:getPadding(
+                        all: 3
+                      ),
+                      child: Container(
+                        height: 200,
+                        width: 200,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: ColorConstant.yellow900,
-
                           boxShadow: [
                             BoxShadow(
                               color: ColorConstant.deepOrange300,
@@ -136,10 +158,7 @@ class PaymentMethodWidget extends StatelessWidget {
                               blurRadius: getHorizontalSize(
                                 2.00,
                               ),
-                              offset: Offset(
-                                0,
-                                0,
-                              ),
+
                             ),
                           ],
                         ),

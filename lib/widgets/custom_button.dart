@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gradient_like_css/gradient_like_css.dart';
 import 'package:part_time/core/app_export.dart';
+import 'package:part_time/view/booking_screen/widgets/shadow_container.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton(
@@ -43,17 +45,26 @@ class CustomButton extends StatelessWidget {
   }
 
   _buildButtonWidget() {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        width: getHorizontalSize(width ?? 0),
-        margin: margin,
-        padding: _setPadding(),
-        decoration: _buildDecoration(),
-        child: Text(
-          text ?? "",
-          textAlign: TextAlign.center,
-          style: _setFontStyle(),
+    return Container(
+      margin: margin,
+
+        child: InkWell(
+        onTap: onTap,
+        child: ShadowContainer(
+          xOffset: 10,
+          yOffset: 10,
+          borderRadius: _setBorderRadius(),
+          child: Container(
+            width: getHorizontalSize(width ?? 0),
+
+            padding: _setPadding(),
+            decoration: _buildDecoration(),
+            child: Text(
+              text ?? "",
+              textAlign: TextAlign.center,
+              style: _setFontStyle(),
+            ),
+          ),
         ),
       ),
     );
@@ -63,7 +74,7 @@ class CustomButton extends StatelessWidget {
     return BoxDecoration(
       borderRadius: _setBorderRadius(),
       gradient: gradient?? _setGradient(),
-      boxShadow: _setBoxShadow(),
+
     );
   }
 
@@ -117,36 +128,9 @@ class CustomButton extends StatelessWidget {
   }
 
   _setGradient() {
-    switch (variant) {
-      case ButtonVariant.OutlineBluegray100:
-        return     LinearGradient(
-    begin: FractionalOffset.topLeft,
-    end: FractionalOffset.bottomRight,
-    colors: [
-    ColorConstant
-        .deepPurpleA100,
-    ColorConstant.indigo500,
-    ColorConstant.bluegray900,
-    ColorConstant.bluegray900,
-    ],
-    );
-      default:
-        return LinearGradient(
-          begin: const Alignment(
-            0,
-            0,
-          ),
-          end: const Alignment(
-            0.3823529599008026,
-            1.202205909464777,
-          ),
-          colors: [
-            ColorConstant.deepPurpleA100,
-            ColorConstant.indigo500,
-            ColorConstant.bluegray900,
-          ],
-        );
-    }
+ return linearGradient(130.06,[
+   "#ACA4FE 0%", "#5C55AB 35.33%", "#2B275A 75.68%"
+ ]);
   }
 
   _setBoxShadow() {

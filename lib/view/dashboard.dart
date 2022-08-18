@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:part_time/core/utils/color_constant.dart';
 import 'package:part_time/core/utils/image_constant.dart';
@@ -31,7 +32,7 @@ class _DashboardViewState extends State<DashboardView> {
   
   @override
   Widget build(BuildContext context) {
-    
+    ScreenUtil.init(context);
     final pages=[
       const BookingScreen(),
       const PaymentScreen(),

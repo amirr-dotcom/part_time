@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gradient_like_css/gradient_like_css.dart';
 import 'package:part_time/core/app_export.dart';
+import 'package:part_time/view/booking_screen/widgets/shadow_container.dart';
 
 class CustomIconButton extends StatelessWidget {
   CustomIconButton(
@@ -31,6 +33,7 @@ class CustomIconButton extends StatelessWidget {
 
   VoidCallback? onTap;
 
+
   @override
   Widget build(BuildContext context) {
     return alignment != null
@@ -42,63 +45,56 @@ class CustomIconButton extends StatelessWidget {
   }
 
   _buildIconButtonWidget() {
-    return Container(
-      decoration: BoxDecoration(
-        color: ColorConstant.gray100,
-        borderRadius: _setBorderRadius(),
-        boxShadow: [
-          BoxShadow(
-            color: ColorConstant.teal50,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              10.00,
-            ),
-            offset: const Offset(
-              10,
-              10,
-            ),
-          ),
-        ],
-      ),
-      child: Container(
-        decoration: BoxDecoration(
-          color: ColorConstant.gray100,
-          borderRadius: _setBorderRadius(),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.white,
-              spreadRadius: getHorizontalSize(
-                2.00,
+    return InkWell(
+      onTap: onTap,
+
+
+      child: SizedBox(
+        height: height,
+        width: width,
+        child: ShadowContainer(
+          xOffset: 3,
+          yOffset: 3,
+          blurRadius: 4,
+          shape: BoxShape.circle,
+
+          color2: ColorConstant.teal51,
+          child:  ShadowContainer(
+            xOffset: 2,
+            yOffset: 2,
+            blurRadius: 4,
+            inset: true,
+
+            shape: BoxShape.circle,
+
+
+            child: Container(
+              margin: getPadding(
+                  all: 10
               ),
-              blurRadius: getHorizontalSize(
-                10.00,
-              ),
-              offset: const Offset(
-                0,
-                0,
-              ),
+              child: ShadowContainer(
+
+                gradient: linearGradient(
+                 135,
+                  [
+                    "#ffffff",
+                    "#D3E7F6",
+                  ],
+                ),
+                  xOffset: 2,
+                  yOffset: 2,
+                  blurRadius: 2,
+
+                  shape: BoxShape.circle,
+
+                  color2: ColorConstant.teal51,
+                  child: Container(
+                    margin: getPadding(
+                        all: 10
+                    ),
+                    child: child??Container(),
+                  )),
             ),
-          ],
-        ),
-        child: Padding(
-          padding: margin ?? EdgeInsets.zero,
-          child: IconButton(
-            constraints: BoxConstraints(
-              minHeight: getSize(height ?? 0),
-              minWidth: getSize(width ?? 0),
-            ),
-            padding: EdgeInsets.all(0),
-            icon: Container(
-              alignment: Alignment.center,
-              width: getSize(width ?? 0),
-              height: getSize(height ?? 0),
-              padding: _setPadding(),
-              decoration: _buildDecoration(),
-              child: child,
-            ),
-            onPressed: onTap,
           ),
         ),
       ),

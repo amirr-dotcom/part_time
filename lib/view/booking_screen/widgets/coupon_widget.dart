@@ -76,23 +76,17 @@ class CouponWidget extends StatelessWidget {
                       children: [
                         Align(
                           alignment: Alignment.center,
-                          child: Padding(
-                            padding: getPadding(
-                              left: 81,
-                              right: 78,
-                            ),
-                            child: Text(
-                              "COUPON",
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                color: ColorConstant.whiteA700,
-                                fontSize: getFontSize(
-                                  16,
-                                ),
-                                fontFamily: 'Kumbh Sans',
-                                fontWeight: FontWeight.w800,
+                          child: Text(
+                            "COUPON",
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: ColorConstant.whiteA700,
+                              fontSize: getFontSize(
+                                16,
                               ),
+                              fontFamily: 'Kumbh Sans',
+                              fontWeight: FontWeight.w800,
                             ),
                           ),
                         ),

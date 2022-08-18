@@ -2,6 +2,7 @@
 
 
 
+import 'package:gradient_like_css/gradient_like_css.dart';
 import 'package:part_time/view/booking_screen/widgets/shadow_container.dart';
 
 import '../booking_screen/widgets/service_widet.dart';
@@ -39,90 +40,83 @@ class BookingScreen extends StatelessWidget {
                 ),
                 child: Row(
                   crossAxisAlignment:
-                  CrossAxisAlignment.end,
+                  CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    SizedBox(
-                      height: getVerticalSize(
-                        142.00,
-                      ),
-                      width: getHorizontalSize(
-                        151.00,
-                      ),
-                      child: Card(
-                        clipBehavior: Clip.antiAlias,
-                        elevation: 0,
-                        margin: const EdgeInsets.all(0),
-                        color: ColorConstant.gray100,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(
-                              getHorizontalSize(
-                                100.00,
-                              ),
+                    Card(
+                      clipBehavior: Clip.antiAlias,
+                      elevation: 0,
+                      margin: const EdgeInsets.all(0),
+                      color: ColorConstant.gray100,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(
+                            getHorizontalSize(
+                              100.00,
                             ),
-                            topRight: Radius.circular(
-                              getHorizontalSize(
-                                20.00,
-                              ),
+                          ),
+                          topRight: Radius.circular(
+                            getHorizontalSize(
+                              20.00,
                             ),
-                            bottomLeft: Radius.circular(
-                              getHorizontalSize(
-                                100.00,
-                              ),
+                          ),
+                          bottomLeft: Radius.circular(
+                            getHorizontalSize(
+                              100.00,
                             ),
-                            bottomRight: Radius.circular(
-                              getHorizontalSize(
-                                20.00,
-                              ),
+                          ),
+                          bottomRight: Radius.circular(
+                            getHorizontalSize(
+                              20.00,
                             ),
                           ),
                         ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment:
-                              Alignment.centerLeft,
-                              child: ClipRRect(
-                                borderRadius:
-                                BorderRadius.only(
-                                  topLeft: Radius.circular(
-                                    getHorizontalSize(
-                                      100.00,
-                                    ),
-                                  ),
-                                  topRight: Radius.circular(
-                                    getHorizontalSize(
-                                      20.00,
-                                    ),
-                                  ),
-                                  bottomLeft:
-                                  Radius.circular(
-                                    getHorizontalSize(
-                                      100.00,
-                                    ),
-                                  ),
-                                  bottomRight:
-                                  Radius.circular(
-                                    getHorizontalSize(
-                                      20.00,
-                                    ),
+                      ),
+                      child: Stack(
+                        children: [
+                          Align(
+                            alignment:
+                            Alignment.centerLeft,
+                            child: ClipRRect(
+                              borderRadius:
+                              BorderRadius.only(
+                                topLeft: Radius.circular(
+                                  getHorizontalSize(
+                                    100.00,
                                   ),
                                 ),
-                                child: CommonImageView(
-                                  imagePath: ImageConstant
-                                      .imgPexelsphotoby,
-                                  height: getVerticalSize(
-                                    142.00,
+                                topRight: Radius.circular(
+                                  getHorizontalSize(
+                                    20.00,
                                   ),
-                                  width: getHorizontalSize(
-                                    151.00,
+                                ),
+                                bottomLeft:
+                                Radius.circular(
+                                  getHorizontalSize(
+                                    100.00,
+                                  ),
+                                ),
+                                bottomRight:
+                                Radius.circular(
+                                  getHorizontalSize(
+                                    20.00,
                                   ),
                                 ),
                               ),
+                              child: CommonImageView(
+                                height: getVerticalSize(
+                                  150.00,
+                                ),
+                                width: getHorizontalSize(
+                                  130.00,
+                                ),
+                                imagePath: ImageConstant
+                                    .imgPexelsphotoby,
+
+                              ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(width: getHorizontalSize(20),),
@@ -244,116 +238,107 @@ class BookingScreen extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              child: Row(
-                                mainAxisAlignment:
-                                MainAxisAlignment
-                                    .spaceBetween,
-                                crossAxisAlignment:
-                                CrossAxisAlignment.start,
-                                mainAxisSize:
-                                MainAxisSize.max,
-                                children: [
-                                  Container(
-                                    width: getHorizontalSize(
-                                      32.00,
-                                    ),
-                                    margin: getMargin(
-                                      left: 35,
-                                      top: 15,
-                                      bottom: 18,
-                                    ),
-                                    child: RichText(
-                                      text: TextSpan(
-                                        children: [
-                                          TextSpan(
-                                            text: '4.5\n',
-                                            style: TextStyle(
-                                              color: ColorConstant
-                                                  .whiteA700,
-                                              fontSize:
-                                              getFontSize(
-                                                16,
+                              child: Padding(
+                                padding: getPadding(
+                                  top: 14,
+                                  bottom: 14
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment
+                                      .spaceBetween,
+                                  crossAxisAlignment:
+                                  CrossAxisAlignment.center,
+                                  mainAxisSize:
+                                  MainAxisSize.max,
+                                  children: [
+                                    Expanded(
+                                      child: RichText(
+
+                                        text: TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: '4.5\n',
+                                              style: TextStyle(
+                                                color: ColorConstant
+                                                    .whiteA700,
+                                                fontSize:
+                                                getFontSize(
+                                                  16,
+                                                ),
+                                                fontFamily:
+                                                'Kumbh Sans',
+                                                fontWeight:
+                                                FontWeight
+                                                    .w700,
                                               ),
-                                              fontFamily:
-                                              'Kumbh Sans',
-                                              fontWeight:
-                                              FontWeight
-                                                  .w700,
                                             ),
-                                          ),
-                                          TextSpan(
-                                            text: 'Rating',
-                                            style: TextStyle(
-                                              color: ColorConstant
-                                                  .whiteA700,
-                                              fontSize:
-                                              getFontSize(
-                                                11,
+                                            TextSpan(
+                                              text: 'Rating',
+                                              style: TextStyle(
+                                                color: ColorConstant
+                                                    .whiteA700,
+                                                fontSize:
+                                                getFontSize(
+                                                  11,
+                                                ),
+                                                fontFamily:
+                                                'Kumbh Sans',
+                                                fontWeight:
+                                                FontWeight
+                                                    .w700,
                                               ),
-                                              fontFamily:
-                                              'Kumbh Sans',
-                                              fontWeight:
-                                              FontWeight
-                                                  .w700,
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
+                                        textAlign:
+                                        TextAlign.center,
                                       ),
-                                      textAlign:
-                                      TextAlign.center,
                                     ),
-                                  ),
-                                  Container(
-                                    width: getHorizontalSize(
-                                      50.00,
-                                    ),
-                                    margin: getMargin(
-                                      top: 15,
-                                      right: 32,
-                                      bottom: 18,
-                                    ),
-                                    child: RichText(
-                                      text: TextSpan(
-                                        children: [
-                                          TextSpan(
-                                            text: '3+\n',
-                                            style: TextStyle(
-                                              color: ColorConstant
-                                                  .whiteA700,
-                                              fontSize:
-                                              getFontSize(
-                                                16,
+                                    Expanded(
+                                      child: RichText(
+                                        text: TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: '3+\n',
+                                              style: TextStyle(
+                                                color: ColorConstant
+                                                    .whiteA700,
+                                                fontSize:
+                                                getFontSize(
+                                                  16,
+                                                ),
+                                                fontFamily:
+                                                'Kumbh Sans',
+                                                fontWeight:
+                                                FontWeight
+                                                    .w700,
                                               ),
-                                              fontFamily:
-                                              'Kumbh Sans',
-                                              fontWeight:
-                                              FontWeight
-                                                  .w700,
                                             ),
-                                          ),
-                                          TextSpan(
-                                            text: 'Years Exp',
-                                            style: TextStyle(
-                                              color: ColorConstant
-                                                  .whiteA700,
-                                              fontSize:
-                                              getFontSize(
-                                                11,
+                                            TextSpan(
+                                              text: 'Years Exp',
+                                              style: TextStyle(
+                                                color: ColorConstant
+                                                    .whiteA700,
+                                                fontSize:
+                                                getFontSize(
+                                                  11,
+                                                ),
+                                                fontFamily:
+                                                'Kumbh Sans',
+                                                fontWeight:
+                                                FontWeight
+                                                    .w700,
                                               ),
-                                              fontFamily:
-                                              'Kumbh Sans',
-                                              fontWeight:
-                                              FontWeight
-                                                  .w700,
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
+                                        textAlign:
+                                        TextAlign.center,
                                       ),
-                                      textAlign:
-                                      TextAlign.center,
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -369,6 +354,8 @@ class BookingScreen extends StatelessWidget {
                 left: 6,
                 top: 54,
                 right: 10,
+
+                bottom: 30
               ),
               child: Text(
                 "Appointment Details",
@@ -384,406 +371,390 @@ class BookingScreen extends StatelessWidget {
                 ),
               ),
             ),
+
+
             Align(
               alignment: Alignment.center,
-              child: Container(
-                margin: getMargin(
-                  top: 30,
-                  right: 2,
-                ),
-
-                child: ShadowContainer(
-                  child: Row(
-                    mainAxisAlignment:
-                    MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment:
-                    CrossAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Expanded(
-                        child: Container(
-                          margin: getMargin(
-                            left: 18,
-                            top: 23,
-                            bottom: 20,
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment:
-                            CrossAxisAlignment.start,
-                            mainAxisAlignment:
-                            MainAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: getPadding(
-                                  right: 10,
-                                ),
-                                child: Text(
-                                  "16 June, 10:30 am",
-                                  overflow:
-                                  TextOverflow.ellipsis,
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    color:
-                                    ColorConstant.gray900,
-                                    fontSize: getFontSize(
-                                      24,
-                                    ),
-                                    fontFamily: 'Kumbh Sans',
-                                    fontWeight: FontWeight.w700,
+              child: ShadowContainer(
+                child: Row(
+                  mainAxisAlignment:
+                  MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment:
+                  CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        margin: getMargin(
+                          left: 18,
+                          top: 23,
+                          bottom: 20,
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment:
+                          CrossAxisAlignment.start,
+                          mainAxisAlignment:
+                          MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: getPadding(
+                                right: 10,
+                              ),
+                              child: Text(
+                                "16 June, 10:30 am",
+                                overflow:
+                                TextOverflow.ellipsis,
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  color:
+                                  ColorConstant.gray900,
+                                  fontSize: getFontSize(
+                                    24,
                                   ),
+                                  fontFamily: 'Kumbh Sans',
+                                  fontWeight: FontWeight.w700,
                                 ),
                               ),
-                              Padding(
-                                padding: getPadding(
-                                  top: 15,
-                                  right: 10,
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.start,
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.center,
-                                  mainAxisSize:
-                                  MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      flex: 8,
-                                      child: Padding(
-                                        padding: getPadding(
-                                          top: 1,
-                                        ),
-                                        child: Text(
-                                          "Patient",
-                                          overflow: TextOverflow
-                                              .ellipsis,
-                                          textAlign:
-                                          TextAlign.left,
-                                          style: TextStyle(
-                                            color: ColorConstant
-                                                .gray900,
-                                            fontSize: getFontSize(
-                                              15,
-                                            ),
-                                            fontFamily:
-                                            'Kumbh Sans',
-                                            fontWeight:
-                                            FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: getHorizontalSize(10),),
-                                    Expanded(
-                                      flex: 10,
-                                      child: Padding(
-                                        padding: getPadding(
-                                          bottom: 1,
-                                        ),
-                                        child: Text(
-                                          "Neil Harris",
-                                          overflow: TextOverflow
-                                              .ellipsis,
-                                          textAlign:
-                                          TextAlign.left,
-                                          style: TextStyle(
-                                            color: ColorConstant
-                                                .yellow900,
-                                            fontSize: getFontSize(
-                                              15,
-                                            ),
-                                            fontFamily:
-                                            'Kumbh Sans',
-                                            fontWeight:
-                                            FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                            ),
+                            Padding(
+                              padding: getPadding(
+                                top: 15,
+                                right: 10,
                               ),
-                              Padding(
-                                padding: getPadding(
-                                  top: 10,
-                                  right: 10,
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.start,
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.center,
-                                  mainAxisSize:
-                                  MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      flex: 8,
-                                      child: Text(
-                                        "Consultation",
-                                        overflow:
-                                        TextOverflow.ellipsis,
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          color: ColorConstant
-                                              .gray900,
-                                          fontSize: getFontSize(
-                                            15,
-                                          ),
-                                          fontFamily:
-                                          'Kumbh Sans',
-                                          fontWeight:
-                                          FontWeight.w700,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: getHorizontalSize(10),),
-                                    Expanded(
-                                      flex: 10,
-                                      child: Text(
-                                        "Clinic",
-                                        overflow: TextOverflow
-                                            .ellipsis,
-                                        textAlign:
-                                        TextAlign.left,
-                                        style: TextStyle(
-                                          color: ColorConstant
-                                              .yellow900,
-                                          fontSize: getFontSize(
-                                            15,
-                                          ),
-                                          fontFamily:
-                                          'Kumbh Sans',
-                                          fontWeight:
-                                          FontWeight.w700,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: getPadding(
-                                  top: 10,
-                                  right: 10,
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.start,
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.center,
-                                  mainAxisSize:
-                                  MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      flex: 8,
-                                      child: Padding(
-                                        padding: getPadding(
-                                          bottom: 1,
-                                        ),
-                                        child: Text(
-                                          "Problem",
-                                          overflow: TextOverflow
-                                              .ellipsis,
-                                          textAlign:
-                                          TextAlign.left,
-                                          style: TextStyle(
-                                            color: ColorConstant
-                                                .gray900,
-                                            fontSize: getFontSize(
-                                              15,
-                                            ),
-                                            fontFamily:
-                                            'Kumbh Sans',
-                                            fontWeight:
-                                            FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: getHorizontalSize(10),),
-                                    Expanded(
-                                      flex: 10,
-                                      child: Padding(
-                                        padding: getPadding(
-
-                                          top: 1,
-                                        ),
-                                        child: Text(
-                                          "Gum Disease",
-                                          overflow: TextOverflow
-                                              .ellipsis,
-                                          textAlign:
-                                          TextAlign.left,
-                                          style: TextStyle(
-                                            color: ColorConstant
-                                                .yellow900,
-                                            fontSize: getFontSize(
-                                              15,
-                                            ),
-                                            fontFamily:
-                                            'Kumbh Sans',
-                                            fontWeight:
-                                            FontWeight.w700,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: getPadding(
-                                  top: 10,
-                                  right: 10,
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.start,
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.center,
-                                  mainAxisSize:
-                                  MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      flex: 8,
-                                      child: Text(
-                                        "Clinic Address",
-                                        overflow:
-                                        TextOverflow.ellipsis,
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          color: ColorConstant
-                                              .gray900,
-                                          fontSize: getFontSize(
-                                            15,
-                                          ),
-                                          fontFamily:
-                                          'Kumbh Sans',
-                                          fontWeight:
-                                          FontWeight.w700,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: getHorizontalSize(10),),
-                                    Expanded(
-                                      flex: 10,
-                                      child: Text(
-                                        "Dental Clinic",
-                                        overflow: TextOverflow
-                                            .ellipsis,
-                                        textAlign:
-                                        TextAlign.left,
-                                        style: TextStyle(
-                                          color: ColorConstant
-                                              .yellow900,
-                                          fontSize: getFontSize(
-                                            15,
-                                          ),
-                                          fontFamily:
-                                          'Kumbh Sans',
-                                          fontWeight:
-                                          FontWeight.w700,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: getVerticalSize(10),),
-                              Row(
+                              child: Row(
+                                mainAxisAlignment:
+                                MainAxisAlignment.start,
+                                crossAxisAlignment:
+                                CrossAxisAlignment.center,
+                                mainAxisSize:
+                                MainAxisSize.max,
                                 children: [
-                                  const Expanded(
-                                      flex: 8,
-                                      child: SizedBox()
+                                  Expanded(
+                                    flex: 8,
+                                    child: Padding(
+                                      padding: getPadding(
+                                        top: 1,
+                                      ),
+                                      child: Text(
+                                        "Patient",
+                                        overflow: TextOverflow
+                                            .ellipsis,
+                                        textAlign:
+                                        TextAlign.left,
+                                        style: TextStyle(
+                                          color: ColorConstant
+                                              .gray900,
+                                          fontSize: getFontSize(
+                                            15,
+                                          ),
+                                          fontFamily:
+                                          'Kumbh Sans',
+                                          fontWeight:
+                                          FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                  SizedBox(width: getHorizontalSize(8),),
+                                  SizedBox(width: getHorizontalSize(10),),
                                   Expanded(
                                     flex: 10,
-                                    child: Text(
-                                      "12/2, Mathura Road,\nSector 37,\nFaridabad - Delhi",
-                                      maxLines: null,
-                                      textAlign: TextAlign.left,
-                                      style: TextStyle(
-                                        color: ColorConstant
-                                            .bluegray400,
-                                        fontSize: getFontSize(
-                                          11,
+                                    child: Padding(
+                                      padding: getPadding(
+                                        bottom: 1,
+                                      ),
+                                      child: Text(
+                                        "Neil Harris",
+                                        overflow: TextOverflow
+                                            .ellipsis,
+                                        textAlign:
+                                        TextAlign.left,
+                                        style: TextStyle(
+                                          color: ColorConstant
+                                              .yellow900,
+                                          fontSize: getFontSize(
+                                            15,
+                                          ),
+                                          fontFamily:
+                                          'Kumbh Sans',
+                                          fontWeight:
+                                          FontWeight.w700,
                                         ),
-                                        fontFamily: 'Kumbh Sans',
-                                        fontWeight:
-                                        FontWeight.w400,
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: getSize(
-                          46.00,
-                        ),
-                        width: getSize(
-                          46.00,
-                        ),
-                        margin: getMargin(
-                          top: 89,
-                          right: 20,
-                          bottom: 89,
-                        ),
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Container(
-                                height: getSize(
-                                  46.00,
-                                ),
-                                width: getSize(
-                                  46.00,
-                                ),
-                                decoration: BoxDecoration(
-                                  borderRadius:
-                                  BorderRadius.circular(
-                                    getHorizontalSize(
-                                      23.00,
+                            ),
+                            Padding(
+                              padding: getPadding(
+                                top: 10,
+                                right: 10,
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                MainAxisAlignment.start,
+                                crossAxisAlignment:
+                                CrossAxisAlignment.center,
+                                mainAxisSize:
+                                MainAxisSize.max,
+                                children: [
+                                  Expanded(
+                                    flex: 8,
+                                    child: Text(
+                                      "Consultation",
+                                      overflow:
+                                      TextOverflow.ellipsis,
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                        color: ColorConstant
+                                            .gray900,
+                                        fontSize: getFontSize(
+                                          15,
+                                        ),
+                                        fontFamily:
+                                        'Kumbh Sans',
+                                        fontWeight:
+                                        FontWeight.w700,
+                                      ),
                                     ),
                                   ),
-                                  border: Border.all(
-                                    color:
-                                    ColorConstant.gray100,
-                                    width: getHorizontalSize(
-                                      10.00,
+                                  SizedBox(width: getHorizontalSize(10),),
+                                  Expanded(
+                                    flex: 10,
+                                    child: Text(
+                                      "Clinic",
+                                      overflow: TextOverflow
+                                          .ellipsis,
+                                      textAlign:
+                                      TextAlign.left,
+                                      style: TextStyle(
+                                        color: ColorConstant
+                                            .yellow900,
+                                        fontSize: getFontSize(
+                                          15,
+                                        ),
+                                        fontFamily:
+                                        'Kumbh Sans',
+                                        fontWeight:
+                                        FontWeight.w700,
+                                      ),
                                     ),
                                   ),
-                                ),
+                                ],
                               ),
                             ),
-                            CustomIconButton(
-                              height: 27,
-                              width: 27,
-                              margin: getMargin(
-                                left: 9,
-                                top: 9,
+                            Padding(
+                              padding: getPadding(
+                                top: 10,
                                 right: 10,
-                                bottom: 10,
                               ),
-                              variant: IconButtonVariant
-                                  .OutlineTeal51,
-                              alignment: Alignment.center,
-                              child: CommonImageView(
-                                svgPath: ImageConstant
-                                    .imgArrowright,
+                              child: Row(
+                                mainAxisAlignment:
+                                MainAxisAlignment.start,
+                                crossAxisAlignment:
+                                CrossAxisAlignment.center,
+                                mainAxisSize:
+                                MainAxisSize.max,
+                                children: [
+                                  Expanded(
+                                    flex: 8,
+                                    child: Padding(
+                                      padding: getPadding(
+                                        bottom: 1,
+                                      ),
+                                      child: Text(
+                                        "Problem",
+                                        overflow: TextOverflow
+                                            .ellipsis,
+                                        textAlign:
+                                        TextAlign.left,
+                                        style: TextStyle(
+                                          color: ColorConstant
+                                              .gray900,
+                                          fontSize: getFontSize(
+                                            15,
+                                          ),
+                                          fontFamily:
+                                          'Kumbh Sans',
+                                          fontWeight:
+                                          FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(width: getHorizontalSize(10),),
+                                  Expanded(
+                                    flex: 10,
+                                    child: Padding(
+                                      padding: getPadding(
+
+                                        top: 1,
+                                      ),
+                                      child: Text(
+                                        "Gum Disease",
+                                        overflow: TextOverflow
+                                            .ellipsis,
+                                        textAlign:
+                                        TextAlign.left,
+                                        style: TextStyle(
+                                          color: ColorConstant
+                                              .yellow900,
+                                          fontSize: getFontSize(
+                                            15,
+                                          ),
+                                          fontFamily:
+                                          'Kumbh Sans',
+                                          fontWeight:
+                                          FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
+                            ),
+                            Padding(
+                              padding: getPadding(
+                                top: 10,
+                                right: 10,
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                MainAxisAlignment.start,
+                                crossAxisAlignment:
+                                CrossAxisAlignment.center,
+                                mainAxisSize:
+                                MainAxisSize.max,
+                                children: [
+                                  Expanded(
+                                    flex: 8,
+                                    child: Text(
+                                      "Clinic Address",
+                                      overflow:
+                                      TextOverflow.ellipsis,
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                        color: ColorConstant
+                                            .gray900,
+                                        fontSize: getFontSize(
+                                          15,
+                                        ),
+                                        fontFamily:
+                                        'Kumbh Sans',
+                                        fontWeight:
+                                        FontWeight.w700,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(width: getHorizontalSize(10),),
+                                  Expanded(
+                                    flex: 10,
+                                    child: Text(
+                                      "Dental Clinic",
+                                      overflow: TextOverflow
+                                          .ellipsis,
+                                      textAlign:
+                                      TextAlign.left,
+                                      style: TextStyle(
+                                        color: ColorConstant
+                                            .yellow900,
+                                        fontSize: getFontSize(
+                                          15,
+                                        ),
+                                        fontFamily:
+                                        'Kumbh Sans',
+                                        fontWeight:
+                                        FontWeight.w700,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: getVerticalSize(10),),
+                            Row(
+                              children: [
+                                const Expanded(
+                                    flex: 8,
+                                    child: SizedBox()
+                                ),
+                                SizedBox(width: getHorizontalSize(8),),
+                                Expanded(
+                                  flex: 10,
+                                  child: Text(
+                                    "12/2, Mathura Road,\nSector 37,\nFaridabad - Delhi",
+                                    maxLines: null,
+                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                      color: ColorConstant
+                                          .bluegray400,
+                                      fontSize: getFontSize(
+                                        11,
+                                      ),
+                                      fontFamily: 'Kumbh Sans',
+                                      fontWeight:
+                                      FontWeight.w400,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    Container(
+
+                      margin: getMargin(
+                        top: 89,
+                        right: 20,
+                        bottom: 89,
+                      ),
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              height: getSize(
+                                46.00,
+                              ),
+                              width: getSize(
+                                46.00,
+                              ),
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                BorderRadius.circular(
+                                  getHorizontalSize(
+                                    23.00,
+                                  ),
+                                ),
+                                border: Border.all(
+                                  color:
+                                  ColorConstant.gray100,
+                                  width: getHorizontalSize(
+                                    10.00,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          CustomIconButton(
+                            height: 45,
+                            width: 45,
+                            onTap: (){
+
+                            },
+                            child: CommonImageView(
+                              svgPath: ImageConstant
+                                  .imgArrowright,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -851,11 +822,16 @@ class BookingScreen extends StatelessWidget {
                   right: 2,
                 ),
                 child: ShadowContainer(
+                  inset: true,
                   borderRadius: BorderRadius.circular(
                     getHorizontalSize(
                       30.00,
                     ),
                   ),
+                  xOffset: 10,
+                  yOffset: 10,
+                  blurRadius: 20,
+                  color2: ColorConstant.teal51,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment:
@@ -1047,79 +1023,66 @@ class BookingScreen extends StatelessWidget {
                             top: 6,
                             right: 25,
                           ),
-                          decoration: BoxDecoration(
-                            color: ColorConstant.gray100,
+
+                          child: ShadowContainer(
                             borderRadius:
                             BorderRadius.circular(
                               getHorizontalSize(
                                 8.50,
                               ),
                             ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: ColorConstant.teal52,
-                                spreadRadius:
-                                getHorizontalSize(
-                                  2.00,
-                                ),
-                                blurRadius: getHorizontalSize(
-                                  2.00,
-                                ),
-                                offset: Offset(
-                                  5,
-                                  5,
-                                ),
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.end,
-                            crossAxisAlignment:
-                            CrossAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Padding(
-                                padding: getPadding(
-                                  top: 2,
-                                  bottom: 2,
-                                ),
-                                child: Text(
-                                  "CONSULT100",
-                                  overflow:
-                                  TextOverflow.ellipsis,
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    color: ColorConstant
-                                        .yellow900,
-                                    fontSize: getFontSize(
-                                      10,
+                            xOffset: 5,
+                            yOffset: 5,
+                            blurRadius: 10,
+                            child: Row(
+                              mainAxisAlignment:
+                              MainAxisAlignment.end,
+                              crossAxisAlignment:
+                              CrossAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Padding(
+                                  padding: getPadding(
+                                    top: 2,
+                                    bottom: 2,
+                                  ),
+                                  child: Text(
+                                    "CONSULT100",
+                                    overflow:
+                                    TextOverflow.ellipsis,
+                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                      color: ColorConstant
+                                          .yellow900,
+                                      fontSize: getFontSize(
+                                        10,
+                                      ),
+                                      fontFamily: 'Kumbh Sans',
+                                      fontWeight:
+                                      FontWeight.w800,
                                     ),
-                                    fontFamily: 'Kumbh Sans',
-                                    fontWeight:
-                                    FontWeight.w800,
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding: getPadding(
-                                  left: 7,
-                                  top: 2,
-                                  right: 2,
-                                  bottom: 2,
-                                ),
-                                child: CommonImageView(
-                                  svgPath:
-                                  ImageConstant.imgClose,
-                                  height: getSize(
-                                    13.00,
+                                Padding(
+                                  padding: getPadding(
+                                    left: 7,
+                                    top: 2,
+                                    right: 2,
+                                    bottom: 2,
                                   ),
-                                  width: getSize(
-                                    13.00,
+                                  child: CommonImageView(
+                                    svgPath:
+                                    ImageConstant.imgClose,
+                                    height: getSize(
+                                      13.00,
+                                    ),
+                                    width: getSize(
+                                      13.00,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -1391,17 +1354,9 @@ class BookingScreen extends StatelessWidget {
               ),
             ),
             CustomButton(
-              gradient: LinearGradient(
-                begin: FractionalOffset.topLeft,
-                end: FractionalOffset.bottomRight,
-                colors: [
-                  ColorConstant
-                      .deepPurpleA100,
-                  ColorConstant.indigo500,
-                  ColorConstant.bluegray900,
-                  ColorConstant.bluegray900,
-                ],
-              ),
+              gradient: linearGradient(130.06,[
+                "#ACA4FE 0%", "#5C55AB 35.33%", "#2B275A 75.68%"
+              ]),
               width: 368,
               text: "Proceed",
               margin: getMargin(
@@ -1513,12 +1468,7 @@ class BookingScreen extends StatelessWidget {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Container(
-                                height: getSize(
-                                  46.00,
-                                ),
-                                width: getSize(
-                                  46.00,
-                                ),
+
                                 margin: getMargin(
                                   top: 14,
                                   bottom: 38,
@@ -1558,21 +1508,21 @@ class BookingScreen extends StatelessWidget {
                                       ),
                                     ),
                                     CustomIconButton(
-                                      height: 27,
-                                      width: 27,
-                                      margin: getMargin(
-                                        left: 9,
-                                        top: 10,
-                                        right: 10,
-                                        bottom: 9,
+                                      onTap: (){
+
+                                      },
+                                      height: 50,
+                                      width: 50,
+
+                                      alignment: Alignment.center,
+                                      child: Center(
+                                        child: CommonImageView(
+
+
+                                          svgPath: ImageConstant.imgArrowup,
+                                        ),
                                       ),
-                                      alignment:
-                                      Alignment.center,
-                                      child: CommonImageView(
-                                        svgPath: ImageConstant
-                                            .imgArrowup,
-                                      ),
-                                    ),
+                                    )
                                   ],
                                 ),
                               ),

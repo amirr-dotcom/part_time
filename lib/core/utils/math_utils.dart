@@ -21,9 +21,9 @@ double getFontSize(double px) {
   var height = getVerticalSize(px);
   var width = getHorizontalSize(px);
   if (height < width) {
-    return height.toInt().toDouble();
+    return height.toInt().toDouble()+2;
   } else {
-    return width.toInt().toDouble();
+    return width.toInt().toDouble()+2;
   }
 }
 

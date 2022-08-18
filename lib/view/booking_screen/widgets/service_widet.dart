@@ -22,6 +22,9 @@ class ServiceWidget extends StatelessWidget {
           ),
 
           child:    ShadowContainer(
+            xOffset: 10,
+            yOffset: 10,
+            blurRadius: 20,
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(
                 getHorizontalSize(
@@ -64,17 +67,16 @@ class ServiceWidget extends StatelessWidget {
                           onTap: (){
                             controller.toggle();
                           },
-                          height: 27,
-                          width: 27,
-                          margin: getMargin(
-                            left: 10,
-                            top: 9,
-                            right: 9,
-                            bottom: 10,
-                          ),
+                          height: 50,
+                          width: 50,
+
                           alignment: Alignment.center,
-                          child: CommonImageView(
-                            svgPath: controller.expanded? ImageConstant.imgArrowup:ImageConstant.imgArrowdown,
+                          child: Center(
+                            child: CommonImageView(
+
+
+                              svgPath: controller.expanded? ImageConstant.imgArrowup:ImageConstant.imgArrowdown,
+                            ),
                           ),
                         );
                       },

@@ -1,7 +1,9 @@
 
 
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
+import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:part_time/core/utils/math_utils.dart';
 
 import '../../../core/app_export.dart';
@@ -11,58 +13,44 @@ import '../../../core/app_export.dart';
 class ShadowContainer extends StatelessWidget {
   final Widget child;
   final BorderRadiusGeometry? borderRadius;
-  final Offset? offset;
+  final double? xOffset;
+  final double? yOffset;
+  final double? blurRadius;
+  final double? spreadRadius;
+  final Color? color1;
+  final Color? color2;
+  final BoxShape? shape;
+  final Gradient? gradient;
+  final List<BoxShadow>? boxShadow;
+  final bool? inset;
+  final double? height;
+  final double? width;
 
-  const ShadowContainer({super.key, this.borderRadius, this.offset, required this.child});
+  const ShadowContainer({super.key, this.borderRadius,
+    this.yOffset,
+    this.xOffset,
+    this.blurRadius,
+    this.spreadRadius,
+    this.color1,
+    this.color2,
+    this.shape,
+    this.gradient,
+    this.boxShadow,
+    this.inset,
+    this.height,
+    this.width,
+    required this.child});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-
-      decoration: BoxDecoration(
-        color: ColorConstant.gray100,
-        borderRadius: borderRadius??BorderRadius.only(
-          topLeft: Radius.circular(
-            getHorizontalSize(
-              30.00,
-            ),
-          ),
-          topRight: Radius.circular(
-            getHorizontalSize(
-              150.00,
-            ),
-          ),
-          bottomLeft: Radius.circular(
-            getHorizontalSize(
-              30.00,
-            ),
-          ),
-          bottomRight: Radius.circular(
-            getHorizontalSize(
-              150.00,
-            ),
-          ),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: ColorConstant.teal50,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              10.00,
-            ),
-            offset: offset??const Offset(
-              10,
-              10,
-            ),
-          ),
-        ],
-      ),
-      child: Container(
+      height: height,
+        width: width,
         decoration: BoxDecoration(
+          gradient: gradient,
+          shape: shape??BoxShape.rectangle,
           color: ColorConstant.gray100,
-          borderRadius: borderRadius??BorderRadius.only(
+          borderRadius: (shape==BoxShape.circle)? null: borderRadius??BorderRadius.only(
             topLeft: Radius.circular(
               getHorizontalSize(
                 30.00,
@@ -84,24 +72,36 @@ class ShadowContainer extends StatelessWidget {
               ),
             ),
           ),
-          boxShadow: [
+          boxShadow:boxShadow?? [
             BoxShadow(
-              color: Colors.white.withOpacity(0.7),
+              inset: inset??false,
+              color: color2?? ColorConstant.teal50,
               spreadRadius: getHorizontalSize(
-                2.00,
+                spreadRadius??0.00,
               ),
               blurRadius: getHorizontalSize(
-                10.00,
+                blurRadius?? 20.00,
               ),
-              offset: const Offset(
-                0,
-                0,
+              offset:  Offset(
+                (xOffset??10),
+                (yOffset??10),
+              ),
+            ),
+            BoxShadow(
+              inset: inset??false,
+              color: color1??ColorConstant.whiteA700,
+              spreadRadius: getHorizontalSize(
+                spreadRadius??0.00,
+              ),
+              blurRadius: getHorizontalSize(
+                blurRadius?? 20.00,
+              ),
+              offset:  Offset(
+                -(xOffset??10),
+                -(yOffset??10),
               ),
             ),
           ],
-        ),
-
-      child: child,),
-    );
+        ),child: child);
   }
 }

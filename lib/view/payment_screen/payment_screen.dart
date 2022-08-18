@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:gradient_like_css/gradient_like_css.dart';
 import 'package:part_time/core/app_export.dart';
 import 'package:part_time/theme/app_decoration.dart';
 import 'package:part_time/theme/app_style.dart';
@@ -61,6 +62,7 @@ class PaymentScreen extends StatelessWidget {
                                         getHorizontalSize(
                                             20.00)),
                                   child: Container(
+
                                       clipBehavior:
                                       Clip.antiAlias,
 
@@ -184,16 +186,10 @@ class PaymentScreen extends StatelessWidget {
 
 
                             CustomButton(
-                              gradient: LinearGradient(
-                                begin: FractionalOffset.topLeft,
-                                end: FractionalOffset.bottomRight,
-                                colors: [
-                                  ColorConstant
-                                      .deepPurpleA100,
-                                  ColorConstant.indigo500,
-                                  ColorConstant.bluegray900,
-                                  ColorConstant.bluegray900,
-                                ],
+                              gradient: linearGradient(130.06,
+                                 [
+                                   "#ACA4FE 0%", "#5C55AB 35.33%", "#2B275A 75.68%"
+                                 ]
                               ),
                               width: 368,
                               text: "Confirm",
