@@ -156,14 +156,14 @@ class CustomButton extends StatelessWidget {
           BoxShadow(
             color: ColorConstant.bluegray100,
             spreadRadius: getHorizontalSize(
-              2.00,
+              1.00,
             ),
             blurRadius: getHorizontalSize(
-              2.00,
+              5.00,
             ),
             offset: const Offset(
-              10,
-              10,
+              5,
+              5,
             ),
           )
         ];
